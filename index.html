@@ -1,53 +1,30 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta
-        name="description"
-        content="Conectado ou controlado? Um projeto sobre os dilemas do mundo digital."
-    >
-
-    <title>CTRL+ | Dilemas Digitais</title>
+    <meta name="description" content="Dilemas Digitais: reflexão sobre os desafios do mundo digital e possíveis soluções.">
+    <title>Dilemas Digitais</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    
-    <!-- FUNDO DECORATIVO -->
-    <div class="background">
-        <span class="orb orb-1"></span>
-        <span class="orb orb-2"></span>
-        <span class="grid"></span>
-    </div>
 
-    <!-- HEADER -->
-    <header>
+    <header class="header">
         <nav class="navbar">
+            <a href="#inicio" class="logo">Dilemas<span>Digitais</span></a>
 
-            <a href="#inicio" class="brand">
-                <span class="brand-icon">⌘</span>
-                CTRL<span>+</span>
-            </a>
-
-            <button class="menu-toggle" id="menuToggle">
+            <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
                 ☰
             </button>
 
-            <ul class="nav-menu" id="navMenu">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#inicio">Início</a></li>
-                <li><a href="#problema">Dilema</a></li>
-                <li><a href="#impactos">Impactos</a></li>
+                <li><a href="#problema">Problema</a></li>
                 <li><a href="#solucao">Solução</a></li>
                 <li><a href="#quiz">Quiz</a></li>
             </ul>
-
-            <a href="#quiz" class="nav-button">
-                Testar conhecimento
-            </a>
-
         </nav>
     </header>
 
@@ -55,618 +32,308 @@
 
         <!-- HERO -->
         <section class="hero" id="inicio">
-
             <div class="hero-content">
-
-                <div class="eyebrow">
-                    <span class="pulse"></span>
-                    TECNOLOGIA • SOCIEDADE • COMPORTAMENTO
-                </div>
+                <span class="tag">TECNOLOGIA E SOCIEDADE</span>
 
                 <h1>
-                    Você está
-                    <span>conectado</span>
-                    ou sendo controlado?
+                    Você controla a
+                    <span>tecnologia</span>
+                    ou ela controla você?
                 </h1>
 
                 <p>
-                    A tecnologia transformou a maneira como estudamos,
-                    trabalhamos, conversamos e nos divertimos. Mas existe
-                    um limite entre usar a tecnologia e deixar que ela
-                    controle nossa atenção.
+                    O mundo digital trouxe inúmeras possibilidades, mas também
+                    criou novos dilemas. Descubra um dos principais problemas
+                    da vida conectada e como podemos enfrentá-lo.
                 </p>
 
-                <div class="hero-buttons">
-                    <a href="#problema" class="primary-button">
-                        Descobrir o dilema
-                        <span>→</span>
-                    </a>
-
-                    <a href="#solucao" class="secondary-button">
-                        Ver solução
-                    </a>
-                </div>
-
-                <div class="hero-stats">
-
-                    <div>
-                        <strong>24/7</strong>
-                        <span>conectividade</span>
-                    </div>
-
-                    <div>
-                        <strong>∞</strong>
-                        <span>informação</span>
-                    </div>
-
-                    <div>
-                        <strong>1</strong>
-                        <span>decisão</span>
-                    </div>
-
-                </div>
-
+                <a href="#problema" class="btn">
+                    Explorar o dilema
+                </a>
             </div>
 
-            <!-- CELULAR -->
-            <div class="hero-visual">
-
-                <div class="glow"></div>
-
+            <div class="hero-card">
                 <div class="phone">
+                    <div class="phone-top"></div>
 
-                    <div class="phone-speaker"></div>
-
-                    <div class="phone-header">
-                        <span>09:41</span>
-                        <span>● ● ●</span>
+                    <div class="notification">
+                        <span>●</span>
+                        Nova notificação
                     </div>
 
-                    <div class="phone-title">
-                        <small>SEU DIA</small>
-                        <h3>Como está seu foco?</h3>
+                    <div class="notification">
+                        <span>●</span>
+                        Alguém curtiu sua publicação
                     </div>
 
-                    <div class="focus-circle">
-                        <div>
-                            <strong>37%</strong>
-                            <small>foco</small>
-                        </div>
+                    <div class="notification">
+                        <span>●</span>
+                        Você tem novas mensagens
                     </div>
 
-                    <div class="phone-notification">
-                        <span class="notification-icon">♡</span>
-                        <div>
-                            <strong>Nova curtida</strong>
-                            <small>Você recebeu uma interação.</small>
-                        </div>
-                    </div>
-
-                    <div class="phone-notification">
-                        <span class="notification-icon purple">◉</span>
-                        <div>
-                            <strong>Nova mensagem</strong>
-                            <small>Você tem algo para conferir.</small>
-                        </div>
-                    </div>
-
-                    <div class="phone-notification">
-                        <span class="notification-icon blue">↗</span>
-                        <div>
-                            <strong>Recomendado para você</strong>
-                            <small>Continue assistindo...</small>
-                        </div>
-                    </div>
-
-                    <div class="swipe">
-                        DESLIZE PARA CONTINUAR
-                    </div>
-
-                </div>
-
-                <div class="floating-card card-time">
-                    <span>◷</span>
-                    <div>
-                        <strong>4h 38min</strong>
-                        <small>tempo de tela</small>
+                    <div class="screen-text">
+                        <strong>Mais uma notificação?</strong>
+                        <small>Seu tempo também importa.</small>
                     </div>
                 </div>
-
-                <div class="floating-card card-alert">
-                    <span>!</span>
-                    <div>
-                        <strong>+27 notificações</strong>
-                        <small>nas últimas 2 horas</small>
-                    </div>
-                </div>
-
             </div>
-
         </section>
 
         <!-- PROBLEMA -->
-        <section class="section" id="problema">
+        <section class="section problem-section" id="problema">
+            <div class="section-title">
+                <span>01 — O PROBLEMA</span>
+                <h2>Quando estar conectado vira uma obrigação</h2>
+            </div>
 
-            <div class="section-heading">
+            <div class="problem-grid">
+                <div class="problem-text">
+                    <p>
+                        Redes sociais, aplicativos e plataformas digitais
+                        fazem parte da nossa rotina. O problema aparece quando
+                        a conexão deixa de ser uma escolha e passa a ocupar
+                        grande parte do nosso tempo e atenção.
+                    </p>
 
-                <div>
-                    <span class="section-number">01 / DILEMA</span>
-                    <h2>O problema não é a tecnologia.</h2>
+                    <p>
+                        Notificações constantes, comparação com outras pessoas
+                        e o desejo de verificar o celular frequentemente podem
+                        dificultar a concentração e afastar momentos de
+                        descanso e convivência presencial.
+                    </p>
+
+                    <div class="warning-box">
+                        <strong>O dilema:</strong>
+                        <p>
+                            Como aproveitar os benefícios da tecnologia sem
+                            permitir que ela determine como usamos nosso tempo?
+                        </p>
+                    </div>
                 </div>
 
-                <p>
-                    O verdadeiro desafio está na forma como nos relacionamos
-                    com ela. Quando a conexão se torna automática, nosso
-                    tempo e nossa atenção podem deixar de estar sob nosso
-                    controle.
-                </p>
-
-            </div>
-
-            <div class="dilemma-grid">
-
-                <article class="dilemma-card main-card">
-
-                    <div class="card-top">
-                        <span class="big-icon">◉</span>
-                        <span class="card-label">ATENÇÃO</span>
+                <div class="stats">
+                    <div class="stat-card">
+                        <span class="stat-icon">⏱</span>
+                        <h3>Tempo</h3>
+                        <p>
+                            O uso sem limites pode consumir períodos que
+                            poderiam ser dedicados a outras atividades.
+                        </p>
                     </div>
 
-                    <h3>
-                        O ciclo da distração
-                    </h3>
-
-                    <p>
-                        Uma notificação chama sua atenção. Você verifica o
-                        celular. Encontra uma nova informação. Continua
-                        navegando. Quando percebe, vários minutos passaram.
-                    </p>
-
-                    <div class="cycle">
-                        <span>NOTIFICAÇÃO</span>
-                        <i>→</i>
-                        <span>CURIOSIDADE</span>
-                        <i>→</i>
-                        <span>ROLAGEM</span>
+                    <div class="stat-card">
+                        <span class="stat-icon">🔔</span>
+                        <h3>Notificações</h3>
+                        <p>
+                            Alertas frequentes podem interromper tarefas e
+                            momentos de descanso.
+                        </p>
                     </div>
 
-                </article>
+                    <div class="stat-card">
+                        <span class="stat-icon">👥</span>
+                        <h3>Comparação</h3>
+                        <p>
+                            Conteúdos cuidadosamente selecionados podem criar
+                            expectativas irreais sobre a vida dos outros.
+                        </p>
+                    </div>
 
-                <article class="dilemma-card">
-
-                    <span class="mini-icon red">!</span>
-
-                    <h3>Excesso de tela</h3>
-
-                    <p>
-                        O uso sem limites pode ocupar tempo destinado ao
-                        descanso, estudo, atividades físicas e convivência.
-                    </p>
-
-                    <div class="card-line red-line"></div>
-
-                </article>
-
-                <article class="dilemma-card">
-
-                    <span class="mini-icon purple">◈</span>
-
-                    <h3>Comparação digital</h3>
-
-                    <p>
-                        Nas redes, vemos versões selecionadas da vida das
-                        pessoas, o que pode criar expectativas irreais.
-                    </p>
-
-                    <div class="card-line purple-line"></div>
-
-                </article>
-
-                <article class="dilemma-card">
-
-                    <span class="mini-icon blue">⌁</span>
-
-                    <h3>Privacidade</h3>
-
-                    <p>
-                        Cada publicação, cadastro ou interação pode revelar
-                        informações que deveriam ser compartilhadas com
-                        cuidado.
-                    </p>
-
-                    <div class="card-line blue-line"></div>
-
-                </article>
-
-                <article class="dilemma-card">
-
-                    <span class="mini-icon green">✓</span>
-
-                    <h3>Informação</h3>
-
-                    <p>
-                        A enorme quantidade de conteúdo torna importante
-                        verificar fontes antes de acreditar ou compartilhar.
-                    </p>
-
-                    <div class="card-line green-line"></div>
-
-                </article>
-
+                    <div class="stat-card">
+                        <span class="stat-icon">🔒</span>
+                        <h3>Privacidade</h3>
+                        <p>
+                            Compartilhar informações demais pode aumentar a
+                            exposição dos nossos dados pessoais.
+                        </p>
+                    </div>
+                </div>
             </div>
-
         </section>
 
-        <!-- FRASE -->
-        <section class="quote-section">
-
-            <div class="quote-mark">“</div>
-
-            <blockquote>
-                A tecnologia deveria ampliar nossas possibilidades,
-                não diminuir nossa capacidade de escolher.
-            </blockquote>
-
-            <span>— PRINCÍPIO DO USO CONSCIENTE</span>
-
-        </section>
-
-        <!-- IMPACTOS -->
-        <section class="section" id="impactos">
-
-            <div class="section-heading centered">
-
-                <span class="section-number">02 / IMPACTOS</span>
+        <!-- DILEMA -->
+        <section class="dilemma-section">
+            <div class="dilemma-content">
+                <span>O DILEMA DIGITAL</span>
 
                 <h2>
-                    Quando o digital invade o real.
+                    Tecnologia é boa ou ruim?
                 </h2>
 
                 <p>
-                    O problema não acontece apenas diante da tela.
-                    Nossos hábitos digitais podem influenciar diferentes
-                    áreas da vida cotidiana.
+                    A resposta não é tão simples. A tecnologia pode aproximar
+                    pessoas, facilitar estudos, oferecer entretenimento e
+                    melhorar o acesso à informação. Ao mesmo tempo, seu uso
+                    descontrolado pode gerar consequências negativas.
                 </p>
 
+                <div class="choice-container">
+                    <div class="choice">
+                        <strong>CONEXÃO</strong>
+                        <p>
+                            Comunicação, informação, aprendizado e novas
+                            oportunidades.
+                        </p>
+                    </div>
+
+                    <div class="versus">VS</div>
+
+                    <div class="choice">
+                        <strong>EXCESSO</strong>
+                        <p>
+                            Distração, perda de tempo, exposição e dificuldade
+                            de desconectar.
+                        </p>
+                    </div>
+                </div>
             </div>
-
-            <div class="impact-grid">
-
-                <div class="impact-card">
-
-                    <div class="impact-number">01</div>
-
-                    <div class="impact-icon">◷</div>
-
-                    <h3>Tempo</h3>
-
-                    <p>
-                        Minutos aparentemente pequenos podem se acumular
-                        durante o dia.
-                    </p>
-
-                    <div class="impact-bar">
-                        <span style="width: 82%"></span>
-                    </div>
-
-                </div>
-
-                <div class="impact-card">
-
-                    <div class="impact-number">02</div>
-
-                    <div class="impact-icon">◎</div>
-
-                    <h3>Foco</h3>
-
-                    <p>
-                        Interrupções frequentes dificultam manter a atenção
-                        em uma única atividade.
-                    </p>
-
-                    <div class="impact-bar">
-                        <span style="width: 68%"></span>
-                    </div>
-
-                </div>
-
-                <div class="impact-card">
-
-                    <div class="impact-number">03</div>
-
-                    <div class="impact-icon">♡</div>
-
-                    <h3>Relações</h3>
-
-                    <p>
-                        Estar sempre online não significa necessariamente
-                        estar presente.
-                    </p>
-
-                    <div class="impact-bar">
-                        <span style="width: 56%"></span>
-                    </div>
-
-                </div>
-
-                <div class="impact-card">
-
-                    <div class="impact-number">04</div>
-
-                    <div class="impact-icon">⌁</div>
-
-                    <h3>Privacidade</h3>
-
-                    <p>
-                        Informações pessoais precisam ser compartilhadas com
-                        consciência e responsabilidade.
-                    </p>
-
-                    <div class="impact-bar">
-                        <span style="width: 74%"></span>
-                    </div>
-
-                </div>
-
-            </div>
-
         </section>
 
         <!-- SOLUÇÃO -->
-        <section class="solution-section" id="solucao">
+        <section class="section solution-section" id="solucao">
+            <div class="section-title">
+                <span>02 — POSSÍVEL SOLUÇÃO</span>
+                <h2>Usar a tecnologia de forma consciente</h2>
+            </div>
 
-            <div class="solution-container">
+            <p class="intro">
+                Não precisamos abandonar a tecnologia. Uma alternativa é
+                desenvolver hábitos de uso consciente, estabelecendo limites
+                e pensando antes de compartilhar ou consumir conteúdo.
+            </p>
 
-                <div class="solution-heading">
+            <div class="solutions-grid">
 
-                    <span class="section-number">03 / SOLUÇÃO</span>
-
-                    <h2>
-                        Não precisamos
-                        <span>desconectar.</span>
-                        Precisamos escolher.
-                    </h2>
-
+                <article class="solution-card">
+                    <div class="number">01</div>
+                    <h3>Controle as notificações</h3>
                     <p>
-                        O objetivo não é transformar a tecnologia em vilã.
-                        A proposta é recuperar o controle sobre quando,
-                        como e por que usamos cada ferramenta digital.
+                        Desative alertas que não são importantes e evite
+                        interrupções constantes durante estudos, trabalho ou
+                        momentos de descanso.
                     </p>
+                </article>
 
-                </div>
+                <article class="solution-card">
+                    <div class="number">02</div>
+                    <h3>Estabeleça limites</h3>
+                    <p>
+                        Defina horários para usar redes sociais e reserve
+                        períodos do dia para ficar longe das telas.
+                    </p>
+                </article>
 
-                <div class="steps">
+                <article class="solution-card">
+                    <div class="number">03</div>
+                    <h3>Proteja seus dados</h3>
+                    <p>
+                        Reveja as configurações de privacidade e pense antes
+                        de publicar informações pessoais.
+                    </p>
+                </article>
 
-                    <div class="step active">
-
-                        <div class="step-number">01</div>
-
-                        <div>
-                            <h3>Desacelere</h3>
-
-                            <p>
-                                Desative notificações que não são realmente
-                                importantes e crie momentos sem interrupções.
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <div class="step">
-
-                        <div class="step-number">02</div>
-
-                        <div>
-                            <h3>Estabeleça limites</h3>
-
-                            <p>
-                                Defina horários para redes sociais e períodos
-                                em que o celular não será prioridade.
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <div class="step">
-
-                        <div class="step-number">03</div>
-
-                        <div>
-                            <h3>Questione</h3>
-
-                            <p>
-                                Antes de compartilhar algo, verifique a fonte,
-                                o contexto e a confiabilidade da informação.
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <div class="step">
-
-                        <div class="step-number">04</div>
-
-                        <div>
-                            <h3>Proteja-se</h3>
-
-                            <p>
-                                Revise senhas, permissões, configurações de
-                                privacidade e informações públicas.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
+                <article class="solution-card">
+                    <div class="number">04</div>
+                    <h3>Questione o conteúdo</h3>
+                    <p>
+                        Antes de acreditar ou compartilhar algo, verifique a
+                        fonte e procure outras informações.
+                    </p>
+                </article>
 
             </div>
 
-        </section>
-
-        <!-- DESAFIO -->
-        <section class="challenge-section">
-
-            <div class="challenge-content">
-
-                <div class="challenge-badge">
-                    DESAFIO DIGITAL
+            <div class="action-box">
+                <div>
+                    <span>DESAFIO</span>
+                    <h3>Experimente uma pausa digital</h3>
+                    <p>
+                        Escolha um período do seu dia para ficar sem redes
+                        sociais e observe como você utiliza esse tempo.
+                    </p>
                 </div>
 
-                <h2>
-                    Quanto controle você realmente tem?
-                </h2>
-
-                <p>
-                    Faça um pequeno experimento: durante uma hora, desligue
-                    as notificações e observe quantas vezes você pega o
-                    celular automaticamente.
-                </p>
-
-                <button class="primary-button" id="challengeButton">
-                    Aceitar desafio →
+                <button id="challengeBtn" class="btn">
+                    Aceitar desafio
                 </button>
-
-                <div class="challenge-result" id="challengeResult">
-                    Desafio ativado. Observe seu comportamento durante 1 hora.
-                </div>
-
             </div>
 
+            <p id="challengeMessage" class="challenge-message"></p>
         </section>
 
         <!-- QUIZ -->
         <section class="quiz-section" id="quiz">
-
             <div class="quiz-container">
 
-                <div class="quiz-heading">
+                <div class="quiz-header">
+                    <span>03 — QUIZ</span>
+                    <h2>Você entende os dilemas digitais?</h2>
+                    <p>
+                        Responda às perguntas e descubra quanto você aprendeu.
+                    </p>
+                </div>
 
-                    <span class="section-number">04 / QUIZ</span>
+                <div class="progress-area">
+                    <div class="progress-info">
+                        <span id="questionNumber">Pergunta 1 de 5</span>
+                        <span id="scorePreview">0 pontos</span>
+                    </div>
 
-                    <h2>
-                        Agora é sua vez.
-                    </h2>
+                    <div class="progress-bar">
+                        <div id="progress"></div>
+                    </div>
+                </div>
+
+                <div id="quizContent" class="quiz-content">
+                    <!-- As perguntas serão inseridas pelo JavaScript -->
+                </div>
+
+                <div id="result" class="result hidden">
+                    <div class="result-icon">✓</div>
+
+                    <h2>Quiz concluído!</h2>
 
                     <p>
-                        Teste o que você aprendeu sobre os dilemas digitais.
+                        Sua pontuação foi:
                     </p>
 
-                </div>
+                    <strong id="finalScore">0/5</strong>
 
-                <div class="quiz-box">
+                    <p id="resultMessage"></p>
 
-                    <div class="quiz-top">
-
-                        <span id="questionCounter">
-                            QUESTÃO 01 / 05
-                        </span>
-
-                        <span id="scoreDisplay">
-                            0 PONTOS
-                        </span>
-
-                    </div>
-
-                    <div class="quiz-progress">
-                        <span id="quizProgress"></span>
-                    </div>
-
-                    <div id="quizContent">
-
-                        <div class="question-number">
-                            QUESTÃO 01
-                        </div>
-
-                        <h3 id="question">
-                            Carregando pergunta...
-                        </h3>
-
-                        <div id="answers" class="answers"></div>
-
-                    </div>
-
-                    <div id="feedback" class="feedback"></div>
-
-                    <button id="nextQuestion" class="next-question">
-                        Próxima questão →
+                    <button id="restartBtn" class="btn">
+                        Refazer quiz
                     </button>
-
-                </div>
-
-                <!-- RESULTADO -->
-
-                <div id="quizResult" class="quiz-result hidden">
-
-                    <div class="result-circle">
-                        <span id="resultScore">0</span>
-                        <small>/ 5</small>
-                    </div>
-
-                    <span class="section-number">RESULTADO</span>
-
-                    <h2 id="resultTitle">
-                        Muito bem!
-                    </h2>
-
-                    <p id="resultText">
-                        Você concluiu o quiz.
-                    </p>
-
-                    <button id="restartQuiz" class="primary-button">
-                        Fazer novamente →
-                    </button>
-
                 </div>
 
             </div>
-
         </section>
 
     </main>
 
-    <!-- FOOTER -->
     <footer>
-
         <div class="footer-content">
-
-            <div class="footer-brand">
-
-                <a href="#inicio" class="brand">
-                    <span class="brand-icon">⌘</span>
-                    CTRL<span>+</span>
+            <div>
+                <a href="#inicio" class="logo">
+                    Dilemas<span>Digitais</span>
                 </a>
-
                 <p>
-                    Um projeto sobre tecnologia, escolhas e comportamento
-                    no mundo digital.
+                    Tecnologia consciente começa com escolhas conscientes.
                 </p>
-
             </div>
 
-            <div class="footer-column">
-                <strong>EXPLORAR</strong>
-                <a href="#problema">O dilema</a>
-                <a href="#impactos">Impactos</a>
+            <div class="footer-links">
+                <a href="#problema">Problema</a>
                 <a href="#solucao">Solução</a>
-            </div>
-
-            <div class="footer-column">
-                <strong>PARTICIPE</strong>
                 <a href="#quiz">Quiz</a>
-                <a href="#solucao">Desafio</a>
-                <a href="#inicio">Voltar ao topo</a>
             </div>
-
         </div>
 
-        <div class="footer-bottom">
-            <span>CTRL+ — DILEMAS DIGITAIS</span>
-            <span>© 2026</span>
+        <div class="copyright">
+            © 2026 Dilemas Digitais — Projeto educacional
         </div>
-
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>

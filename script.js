@@ -1,441 +1,277 @@
-// ==========================================
+// ================================
 // MENU MOBILE
-// ==========================================
+// ================================
 
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
 
-    menuToggle.textContent =
-        navMenu.classList.contains("active")
-            ? "✕"
-            : "☰";
+    if (navLinks.classList.contains("active")) {
+        menuBtn.textContent = "✕";
+    } else {
+        menuBtn.textContent = "☰";
+    }
 });
 
-document.querySelectorAll(".nav-menu a").forEach(link => {
+// Fecha o menu ao clicar em um link
+document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
-        navMenu.classList.remove("active");
-        menuToggle.textContent = "☰";
+        navLinks.classList.remove("active");
+        menuBtn.textContent = "☰";
     });
 });
 
 
-// ==========================================
+// ================================
 // DESAFIO DIGITAL
-// ==========================================
+// ================================
 
-const challengeButton =
-    document.getElementById("challengeButton");
+const challengeBtn = document.getElementById("challengeBtn");
+const challengeMessage = document.getElementById("challengeMessage");
 
-const challengeResult =
-    document.getElementById("challengeResult");
+challengeBtn.addEventListener("click", () => {
+    challengeMessage.textContent =
+        "Desafio aceito! Escolha um período hoje para ficar longe das redes sociais e observe como você utiliza esse tempo.";
 
-challengeButton.addEventListener("click", () => {
-
-    challengeResult.classList.add("show");
-
-    challengeButton.innerHTML =
-        "Desafio ativado ✓";
-
-    challengeButton.style.opacity = "0.7";
-
-    challengeButton.disabled = true;
+    challengeBtn.textContent = "Desafio aceito ✓";
+    challengeBtn.style.opacity = "0.7";
+    challengeBtn.disabled = true;
 });
 
 
-// ==========================================
+// ================================
 // QUIZ
-// ==========================================
+// ================================
 
 const questions = [
-
     {
         question:
-            "Qual é o principal problema apresentado no dilema digital deste site?",
-
-        answers: [
-            "A existência de qualquer tecnologia",
-            "A dificuldade de manter controle consciente sobre o uso da tecnologia",
-            "A falta de acesso às redes sociais",
-            "A ausência de dispositivos eletrônicos"
+            "Qual é uma das principais características de um uso consciente da tecnologia?",
+        options: [
+            "Usar todas as redes sociais ao mesmo tempo",
+            "Estabelecer limites para o tempo e a forma de uso",
+            "Manter todas as notificações ativadas",
+            "Compartilhar informações pessoais frequentemente"
         ],
-
-        correct: 1,
-
-        feedback:
-            "O dilema está relacionado ao equilíbrio: a tecnologia pode ser útil, mas seu uso automático ou excessivo pode ocupar nossa atenção e nosso tempo."
+        answer: 1,
+        explanation:
+            "Definir limites ajuda a manter a tecnologia como uma ferramenta, em vez de permitir que ela controle toda a rotina."
     },
 
     {
         question:
-            "Qual atitude pode ajudar a diminuir distrações causadas pelo celular?",
-
-        answers: [
-            "Ativar todas as notificações",
-            "Usar várias redes sociais simultaneamente",
-            "Desativar notificações que não são importantes",
-            "Manter o celular sempre aberto durante uma tarefa"
+            "Por que notificações constantes podem ser um problema?",
+        options: [
+            "Porque tornam o celular mais lento",
+            "Porque impedem qualquer acesso à internet",
+            "Porque podem interromper a concentração e o descanso",
+            "Porque eliminam automaticamente as mensagens"
         ],
-
-        correct: 2,
-
-        feedback:
-            "Desativar notificações desnecessárias pode diminuir interrupções e ajudar a preservar períodos de concentração."
+        answer: 2,
+        explanation:
+            "Notificações frequentes podem interromper tarefas, estudos e momentos de descanso."
     },
 
     {
         question:
-            "Qual atitude é mais adequada ao encontrar uma informação duvidosa na internet?",
-
-        answers: [
-            "Compartilhar imediatamente",
-            "Verificar a fonte e comparar informações",
-            "Acreditar porque recebeu muitas curtidas",
-            "Compartilhar somente com amigos"
-        ],
-
-        correct: 1,
-
-        feedback:
-            "Verificar fontes e comparar informações ajuda a avaliar melhor a confiabilidade de um conteúdo antes de compartilhá-lo."
-    },
-
-    {
-        question:
-            "Qual comportamento ajuda a proteger a privacidade digital?",
-
-        answers: [
-            "Publicar informações pessoais sem pensar",
+            "Qual atitude contribui para proteger a privacidade no ambiente digital?",
+        options: [
+            "Publicar informações pessoais sem verificar a privacidade",
             "Usar a mesma senha em todos os serviços",
-            "Compartilhar documentos pessoais nas redes",
-            "Revisar configurações de privacidade e permissões"
+            "Compartilhar documentos pessoais nas redes sociais",
+            "Revisar configurações de privacidade e pensar antes de publicar"
         ],
-
-        correct: 3,
-
-        feedback:
-            "Revisar configurações de privacidade e permissões ajuda a controlar quais informações e recursos ficam acessíveis."
+        answer: 3,
+        explanation:
+            "Revisar as configurações de privacidade e pensar antes de compartilhar informações reduz a exposição desnecessária."
     },
 
     {
         question:
-            "O que significa ter equilíbrio digital?",
-
-        answers: [
-            "Nunca utilizar dispositivos eletrônicos",
-            "Usar tecnologia durante o maior tempo possível",
-            "Utilizar tecnologia de maneira consciente, estabelecendo limites",
-            "Excluir todas as redes sociais"
+            "Diante de uma informação duvidosa encontrada nas redes sociais, qual atitude é mais adequada?",
+        options: [
+            "Compartilhar imediatamente",
+            "Verificar a fonte e procurar outras informações",
+            "Acreditar porque muitas pessoas compartilharam",
+            "Ignorar qualquer informação diferente da sua opinião"
         ],
+        answer: 1,
+        explanation:
+            "Verificar a fonte e comparar informações ajuda a reduzir a propagação de conteúdos falsos ou enganosos."
+    },
 
-        correct: 2,
-
-        feedback:
-            "Equilíbrio digital não significa abandonar a tecnologia, mas utilizá-la de maneira consciente e compatível com outras áreas da vida."
+    {
+        question:
+            "Qual é a ideia central do conceito de equilíbrio digital?",
+        options: [
+            "Abandonar completamente a tecnologia",
+            "Usar dispositivos digitais durante todo o dia",
+            "Utilizar a tecnologia de maneira consciente e equilibrada",
+            "Evitar qualquer forma de comunicação online"
+        ],
+        answer: 2,
+        explanation:
+            "Equilíbrio digital não significa abandonar a tecnologia, mas utilizá-la de forma consciente, estabelecendo limites."
     }
-
 ];
 
 let currentQuestion = 0;
 let score = 0;
-let questionAnswered = false;
+let answered = false;
+
+const quizContent = document.getElementById("quizContent");
+const result = document.getElementById("result");
+const questionNumber = document.getElementById("questionNumber");
+const scorePreview = document.getElementById("scorePreview");
+const progress = document.getElementById("progress");
+const finalScore = document.getElementById("finalScore");
+const resultMessage = document.getElementById("resultMessage");
+const restartBtn = document.getElementById("restartBtn");
 
 
-// ELEMENTOS
+// Mostra a pergunta atual
+function showQuestion() {
+    answered = false;
 
-const questionElement =
-    document.getElementById("question");
+    const question = questions[currentQuestion];
 
-const answersElement =
-    document.getElementById("answers");
+    questionNumber.textContent =
+        `Pergunta ${currentQuestion + 1} de ${questions.length}`;
 
-const feedbackElement =
-    document.getElementById("feedback");
+    scorePreview.textContent =
+        `${score} ${score === 1 ? "ponto" : "pontos"}`;
 
-const nextButton =
-    document.getElementById("nextQuestion");
-
-const questionCounter =
-    document.getElementById("questionCounter");
-
-const scoreDisplay =
-    document.getElementById("scoreDisplay");
-
-const quizProgress =
-    document.getElementById("quizProgress");
-
-const quizBox =
-    document.querySelector(".quiz-box");
-
-const quizResult =
-    document.getElementById("quizResult");
-
-const resultScore =
-    document.getElementById("resultScore");
-
-const resultTitle =
-    document.getElementById("resultTitle");
-
-const resultText =
-    document.getElementById("resultText");
-
-const restartQuiz =
-    document.getElementById("restartQuiz");
-
-
-// ==========================================
-// MOSTRAR PERGUNTA
-// ==========================================
-
-function loadQuestion() {
-
-    questionAnswered = false;
-
-    const question =
-        questions[currentQuestion];
-
-    questionElement.textContent =
-        question.question;
-
-    questionCounter.textContent =
-        `QUESTÃO ${String(currentQuestion + 1).padStart(2, "0")} / ${questions.length}`;
-
-    scoreDisplay.textContent =
-        `${score} ${score === 1 ? "PONTO" : "PONTOS"}`;
-
-    const progress =
+    const percentage =
         ((currentQuestion + 1) / questions.length) * 100;
 
-    quizProgress.style.width =
-        `${progress}%`;
+    progress.style.width = `${percentage}%`;
 
-    answersElement.innerHTML = "";
+    quizContent.innerHTML = `
+        <div class="question-card">
 
-    feedbackElement.classList.remove("show");
+            <h3>${question.question}</h3>
 
-    feedbackElement.textContent = "";
+            <div class="options">
+                ${question.options
+                    .map((option, index) => `
+                        <button
+                            class="option"
+                            data-index="${index}"
+                        >
+                            ${String.fromCharCode(65 + index)}. ${option}
+                        </button>
+                    `)
+                    .join("")}
+            </div>
 
-    nextButton.classList.remove("show");
+            <div id="feedback" class="feedback hidden"></div>
 
+            <button
+                id="nextBtn"
+                class="btn next-btn hidden"
+            >
+                ${currentQuestion === questions.length - 1
+                    ? "Ver resultado"
+                    : "Próxima pergunta"}
+            </button>
 
-    question.answers.forEach((answer, index) => {
+        </div>
+    `;
 
-        const button =
-            document.createElement("button");
-
-        button.classList.add("answer");
-
-        button.innerHTML = `
-            <span class="answer-letter">
-                ${String.fromCharCode(65 + index)}
-            </span>
-
-            <span>
-                ${answer}
-            </span>
-        `;
-
-        button.addEventListener(
-            "click",
-            () => selectAnswer(button, index)
-        );
-
-        answersElement.appendChild(button);
+    document.querySelectorAll(".option").forEach(button => {
+        button.addEventListener("click", selectAnswer);
     });
+
+    document.getElementById("nextBtn").addEventListener("click", nextQuestion);
 }
 
 
-// ==========================================
-// SELECIONAR RESPOSTA
-// ==========================================
+// Verifica a resposta
+function selectAnswer(event) {
+    if (answered) return;
 
-function selectAnswer(button, selectedIndex) {
+    answered = true;
 
-    if (questionAnswered) return;
+    const selectedIndex = Number(event.currentTarget.dataset.index);
+    const question = questions[currentQuestion];
 
-    questionAnswered = true;
+    const options = document.querySelectorAll(".option");
+    const feedback = document.getElementById("feedback");
+    const nextBtn = document.getElementById("nextBtn");
 
-    const question =
-        questions[currentQuestion];
-
-    const allAnswers =
-        document.querySelectorAll(".answer");
-
-
-    allAnswers.forEach(answer => {
-        answer.classList.add("disabled");
-        answer.disabled = true;
+    options.forEach(button => {
+        button.disabled = true;
     });
 
-
-    if (selectedIndex === question.correct) {
-
-        button.classList.add("correct");
-
+    if (selectedIndex === question.answer) {
+        event.currentTarget.classList.add("correct");
         score++;
 
-        feedbackElement.textContent =
-            `Resposta correta! ${question.feedback}`;
-
+        feedback.textContent = `Resposta correta! ${question.explanation}`;
     } else {
+        event.currentTarget.classList.add("wrong");
+        options[question.answer].classList.add("correct");
 
-        button.classList.add("wrong");
-
-        allAnswers[
-            question.correct
-        ].classList.add("correct");
-
-        feedbackElement.textContent =
-            `Resposta incorreta. ${question.feedback}`;
+        feedback.textContent =
+            `Resposta incorreta. ${question.explanation}`;
     }
 
+    scorePreview.textContent =
+        `${score} ${score === 1 ? "ponto" : "pontos"}`;
 
-    feedbackElement.classList.add("show");
-
-    scoreDisplay.textContent =
-        `${score} ${score === 1 ? "PONTO" : "PONTOS"}`;
-
-    nextButton.textContent =
-        currentQuestion === questions.length - 1
-            ? "Ver resultado →"
-            : "Próxima questão →";
-
-    nextButton.classList.add("show");
+    feedback.classList.remove("hidden");
+    nextBtn.classList.remove("hidden");
 }
 
 
-// ==========================================
-// PRÓXIMA QUESTÃO
-// ==========================================
-
-nextButton.addEventListener("click", () => {
-
+// Avança para a próxima pergunta
+function nextQuestion() {
     currentQuestion++;
 
     if (currentQuestion < questions.length) {
-
-        loadQuestion();
-
+        showQuestion();
     } else {
-
         showResult();
-    }
-});
-
-
-// ==========================================
-// RESULTADO
-// ==========================================
-
-function showResult() {
-
-    quizBox.classList.add("hidden");
-
-    quizResult.classList.remove("hidden");
-
-    resultScore.textContent =
-        score;
-
-
-    if (score === 5) {
-
-        resultTitle.textContent =
-            "Excelente!";
-
-        resultText.textContent =
-            "Você demonstrou uma ótima compreensão dos dilemas digitais e das atitudes que podem ajudar a construir uma relação mais consciente com a tecnologia.";
-
-    } else if (score >= 3) {
-
-        resultTitle.textContent =
-            "Muito bem!";
-
-        resultText.textContent =
-            "Você já conhece os principais desafios do mundo digital. Agora, o próximo passo é transformar esse conhecimento em hábitos.";
-
-    } else {
-
-        resultTitle.textContent =
-            "Continue explorando!";
-
-        resultText.textContent =
-            "Os dilemas digitais fazem parte da nossa rotina. Reveja as seções do site e tente novamente para aprofundar seu conhecimento.";
     }
 }
 
 
-// ==========================================
-// REINICIAR
-// ==========================================
+// Mostra o resultado
+function showResult() {
+    quizContent.classList.add("hidden");
+    result.classList.remove("hidden");
 
-restartQuiz.addEventListener("click", () => {
+    finalScore.textContent =
+        `${score}/${questions.length}`;
 
+    if (score === questions.length) {
+        resultMessage.textContent =
+            "Excelente! Você demonstrou uma ótima compreensão sobre o uso consciente da tecnologia.";
+    } else if (score >= 3) {
+        resultMessage.textContent =
+            "Muito bem! Você conhece os principais dilemas digitais, mas ainda pode aprofundar seus conhecimentos.";
+    } else {
+        resultMessage.textContent =
+            "Continue aprendendo! Pequenas mudanças nos hábitos digitais podem fazer uma grande diferença.";
+    }
+
+    progress.style.width = "100%";
+}
+
+
+// Reinicia o quiz
+restartBtn.addEventListener("click", () => {
     currentQuestion = 0;
-
     score = 0;
 
-    quizResult.classList.add("hidden");
+    result.classList.add("hidden");
+    quizContent.classList.remove("hidden");
 
-    quizBox.classList.remove("hidden");
-
-    loadQuestion();
-
-    document
-        .getElementById("quiz")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    showQuestion();
 });
 
 
-// ==========================================
-// INICIAR
-// ==========================================
-
-loadQuestion();
-
-
-// ==========================================
-// ANIMAÇÃO AO ENTRAR NA TELA
-// ==========================================
-
-const observer =
-    new IntersectionObserver(
-        entries => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.style.opacity = "1";
-
-                    entry.target.style.transform =
-                        "translateY(0)";
-                }
-            });
-
-        },
-        {
-            threshold: 0.12
-        }
-    );
-
-
-document
-    .querySelectorAll(
-        ".dilemma-card, .impact-card, .step"
-    )
-    .forEach(element => {
-
-        element.style.opacity = "0";
-
-        element.style.transform =
-            "translateY(25px)";
-
-        element.style.transition =
-            "opacity 0.7s ease, transform 0.7s ease";
-
-        observer.observe(element);
-    });
+// Inicia o quiz
+showQuestion();
